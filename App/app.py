@@ -9,7 +9,7 @@ import pandas as pd
 # Utils
 import joblib
 import os
-model_path = os.path.join('models', 'emotion_pipe_lr.pkl')
+model_path = os.path.join('App/models', 'emotion_pipe_lr.pkl')
 
 
 pipe_lr = joblib.load(open(model_path, 'rb'))
