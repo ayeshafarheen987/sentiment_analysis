@@ -8,8 +8,11 @@ import pandas as pd
 
 # Utils
 import joblib
+import os
+model_path = os.path.join('models', 'emotion_pipe_lr.pkl')
 
-pipe_lr = joblib.load(open(r'C:\Users\LENOVO X1 YOGA\Downloads\Emotion-Classifier-App--main\Emotion-Classifier-App--main\App\models\emotion_pipe_lr.pkl', 'rb'))
+
+pipe_lr = joblib.load(open(model_path, 'rb'))
 emotions_emoji_dict = {"anger":"😠","disgust":"🤮", "fear":"😨😱", "happy":"🤗", "joy":"😂", "neutral":"😐", "sad":"😔", "sadness":"😔", "shame":"😳", "surprise":"😮"}
 
 def predict_emotion(docx):
